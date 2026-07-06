@@ -1,6 +1,7 @@
 QuickBite Express — Crisis Recovery Analysis & Strategic Roadmap
 
 
+
 In June 2025, QuickBite Express lost 70% of its customer base in less than 90 days. This repository contains a complete Power BI analysis of what went wrong — and how data can guide the recovery.
 
 
