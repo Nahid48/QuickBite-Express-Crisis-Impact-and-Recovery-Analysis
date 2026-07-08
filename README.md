@@ -1,384 +1,986 @@
-QuickBite Express — Crisis Recovery Analysis & Strategic Roadmap
+# 🍔 QuickBite Express – Crisis Impact & Recovery Analysis
 
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)
+![DAX](https://img.shields.io/badge/DAX-Analytics-blue)
+![SQL](https://img.shields.io/badge/SQL-Data%20Analysis-orange)
+![Business Analytics](https://img.shields.io/badge/Business-Analytics-green)
+![Project](https://img.shields.io/badge/Project-Case%20Study-red)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
+A comprehensive **business case study** that investigates the dramatic decline of **QuickBite Express**, a fictional food delivery startup, after a major operational crisis. Using **Power BI**, **DAX**, and business analytics techniques, this project identifies the root causes of customer churn, revenue loss, operational failures, and proposes a strategic recovery roadmap backed by data.
 
-In June 2025, QuickBite Express lost 70% of its customer base in less than 90 days. This repository contains a complete Power BI analysis of what went wrong — and how data can guide the recovery.
+---
 
+# 📖 Table of Contents
 
+- Project Overview
+- Business Problem
+- Objectives
+- Dataset Overview
+- Dashboard Overview
+- Key Business Questions
+- Methodology
+- KPIs Tracked
+- Key Findings
+- Recovery Strategy
+- Business Recommendations
+- Tech Stack
+- Repository Structure
+- Dashboard Preview
+- Future Improvements
+- Business Impact
+- Author
 
-A comprehensive, data-driven analysis of a food delivery startup's crisis and evidence-based recovery strategy.
+---
 
-Project Type: Business Case Analysis · Data Analytics · Strategic Consulting
-Domain: Food Delivery & Consumer Analytics
-Time Period Analyzed: January – September 2025
-Focus: Crisis Analysis & Recovery Strategy Development
-Tools Used: Power BI, DAX, Statistical Analysis
-Audience: Data Analysts, Business Strategists, Recruiters
+# 📌 Project Overview
 
+QuickBite Express experienced one of the biggest operational failures in its history during **June 2025**.
 
-📋 Table of Contents
+Within just **90 days**, the company lost nearly **70% of its active customers**, experienced massive revenue decline, suffered poor customer ratings, and lost restaurant partners due to service disruptions.
 
+This project demonstrates how **data analytics** can transform raw business data into actionable insights and strategic recommendations for organizational recovery.
 
-Project Overview
-Problem Statement
-Dataset Description
-Methodology
-Key Findings
-Recommendations
-Technical Implementation
+The dashboard analyzes customer behavior, operational performance, restaurant trends, financial impact, customer sentiment, and competitive positioning to answer one fundamental question:
 
+> **How can QuickBite Express recover from one of the largest crises in its business history?**
 
+---
 
-🎯 Project Overview
+# 🚨 Business Problem
 
-Executive Summary
+QuickBite Express suffered a severe operational crisis caused by multiple simultaneous events:
 
-In June 2025, QuickBite Express — a Bengaluru-based food delivery startup (founded 2020) — faced a critical crisis triggered by:
+- Food safety controversy
+- Delivery infrastructure outage
+- Monsoon disruptions
+- Increased delivery delays
+- High cancellation rates
+- Negative customer reviews
+- Aggressive competitor marketing
+- Restaurant partner attrition
 
+These issues resulted in:
 
-A viral food safety incident involving partner restaurants
-A week-long delivery infrastructure outage during monsoon season
-Aggressive competitor campaigns capitalizing on operational failures
+- 📉 70% Customer Churn
+- 💰 ₹27 Million Revenue Loss
+- ⭐ Customer Rating Drop (4.5 → 2.3)
+- 🍽️ Restaurant Partner Loss
+- 🚚 Delivery SLA Collapse
 
+The management team required a complete data-driven assessment to understand what happened and how the business could recover.
 
-Crisis Impact:
+---
 
-MetricImpactCustomers churned73,000 (70% of active base)Revenue lost₹27 million (4 months)Customer ratingsCollapsed from 4.5 → 2.3 starsRestaurant partner exodus20%
+# 🎯 Project Objectives
 
-Key Discovery: Despite the severity, 30% of churned customers (22,000) were recoverable — they left due to operational failure, not dissatisfaction.
+This analysis aims to:
 
-Strategic Output: A data-driven ₹70–80M recovery roadmap with 4 strategic pillars, expected to achieve 80–90% recovery within 6–9 months with a 3–4x ROI on reactivation.
+- Analyze customer churn patterns
+- Measure revenue decline
+- Identify operational bottlenecks
+- Understand customer sentiment
+- Evaluate delivery performance
+- Analyze restaurant partner performance
+- Compare business performance before and after the crisis
+- Estimate customer recovery potential
+- Build an actionable recovery roadmap
+- Support strategic business decisions through data visualization
 
+---
 
-💼 Problem Statement
+# 📊 Dataset Overview
 
-Business Challenge
+The project analyzes business data collected between:
 
-QuickBite Express requires a comprehensive analysis of its June–September 2025 crisis to:
+**January 2025 – September 2025**
 
+The dataset includes multiple business domains:
 
-Understand Crisis Severity — quantify impact across all business metrics
-Identify Root Causes — determine what triggered the cascade of failures
-Analyze Customer Impact — segment churned customers by recovery probability
-Benchmark Competitively — compare against industry peers during the crisis
-Design a Recovery Strategy — a data-backed turnaround plan with timelines & ROI
-Surface Operational Insights — identify systemic vulnerabilities to prevent recurrence
+### Orders
 
+- Order ID
+- Customer ID
+- Restaurant ID
+- Order Date
+- Order Amount
+- Delivery Status
+- Cancellation Status
 
-Analysis Questions Addressed
+### Customers
 
-Primary Analysis (10 questions)
+- Customer Lifetime Value
+- Acquisition Date
+- Customer Status
+- Loyalty Information
+- Total Orders
+- Spending
 
+### Restaurants
 
-Monthly order decline comparison (pre-crisis vs. crisis)
-Top 5 cities by order decline percentage
-Top 10 high-volume restaurants with the largest decline
-Cancellation rate trend analysis and geographic impact
-Delivery SLA performance degradation
-Monthly customer rating fluctuations
-Negative keyword sentiment analysis
-Revenue impact quantification
-Loyalty impact on customers with 5+ orders and 4.5+ ratings
-High-value customer (top 5%) decline patterns
+- Cuisine Type
+- Restaurant Status
+- Partner Performance
+- Order Volume
 
+### Reviews
 
-Secondary Analysis (5 questions + 3 supplementary details)
+- Customer Ratings
+- Review Text
+- Sentiment
+- Complaint Categories
 
+### Operations
 
-Competitor comparison (Swiggy, Zomato performance)
-External factors contributing to CAC tripling
-Most effective recovery strategies
-Restaurant type churn risk assessment
-Lapsed customer return probability
-Priority cities risk analysis
-Customer order value shift behavior
-Review spike correlation with the delivery outage
+- Delivery Time
+- SLA Compliance
+- Cancellation Rate
+- Delay Metrics
 
+---
+# 📈 Dashboard Overview
 
+The Power BI dashboard has been designed to provide a complete 360° view of the business crisis by combining operational, financial, and customer-focused analytics.
 
-📊 Dataset Description
+The dashboard enables stakeholders to:
 
-Data Sources
+- Monitor business performance before and after the crisis
+- Track customer churn and retention
+- Evaluate delivery performance
+- Measure financial losses
+- Analyze restaurant partner performance
+- Understand customer sentiment
+- Compare business metrics across different cities
+- Support strategic decision-making
 
-Data TypeSourceTime PeriodRecordsKey MetricsOrdersQuickBite transactional DBJan–Sep 2025149K ordersorder_id, customer_id, order_date, order_total, phaseCustomersCRM systemJan–Sep 2025105K customerscustomer_id, acquisition_date, total_spend, LTVReviews & RatingsReview systemJan–Sep 202548K reviewsrating, sentiment, review_text, dateRestaurant DataPartner DBJan–Sep 202520K restaurantsrestaurant_id, cuisine_type, order_count, statusOperational MetricsDelivery/Operations DBJan–Sep 2025Daily logsdelivery_time, sla_compliance, cancellations, delays
+---
 
-Key Fields & Definitions
+# 📊 Dashboard Pages
 
-Phase Classification
+The dashboard consists of multiple analytical pages, each designed to answer a specific business question.
 
+## 📌 Executive Dashboard
 
-Pre-Crisis: January – May 2025 (5-month baseline)
-Crisis: June – September 2025 (4 months of operational failure)
+Provides a high-level overview of:
 
+- Total Revenue
+- Total Orders
+- Active Customers
+- Customer Churn
+- Average Rating
+- Cancellation Rate
+- Delivery SLA
+- Revenue Trend
 
-Customer Segmentation
+---
 
-SegmentCountDefinitionTotal Customers105,000All unique customersActive (Pre-Crisis)100,000Placed 1+ orders Jan–MayActive (Crisis)27,000Placed 1+ orders Jun–SepChurned73,000Orders pre-crisis, zero orders during crisisNew18,000First order Jun–Sep 2025Retained14,000Orders in both periods
+## 📌 Customer Analysis
 
-Order Metrics
+Focus Areas:
 
+- Customer Segmentation
+- Customer Lifetime Value (LTV)
+- Retained Customers
+- Churned Customers
+- New Customers
+- High-Value Customers
+- Loyalty Analysis
+- Recovery Probability
 
-Pre-Crisis Monthly Average: 24,000 orders/month
-Crisis Monthly Average: 9,000 orders/month
-Decline: 69% (24K → 9K)
+---
 
+## 📌 Revenue Analysis
 
-Revenue Metrics
+Includes:
 
+- Monthly Revenue Trend
+- Revenue Decline
+- Revenue by City
+- Revenue by Restaurant
+- Revenue by Customer Segment
+- Revenue Loss Estimation
 
-Pre-Crisis Total: ₹3.8 crore (5 months)
-Crisis Total: ₹1.1 crore (4 months)
-Difference: ₹2.7 crore lost
-Decline: 71%
+---
 
+## 📌 Operational Analysis
 
+Measures operational efficiency through:
 
-🔬 Methodology
+- Average Delivery Time
+- Delivery Delays
+- SLA Compliance
+- Order Cancellation Rate
+- Delivery Success Rate
+- Operational Performance Trends
 
-1. Data Analysis Framework
+---
 
-A. Descriptive Analysis
+## 📌 Restaurant Analysis
 
-Purpose: Understand current state and crisis severity
+Business partner performance including:
 
-Metrics calculated:
+- Top Restaurants
+- Low Performing Restaurants
+- Restaurant Churn
+- Cuisine Performance
+- Order Volume
+- Revenue Contribution
 
+---
 
-Order volume by month, city, and cuisine
-Revenue by component (subtotal, delivery fee, discounts)
-Customer counts by status (active, churned, new, retained)
-Cancellation rates and SLA compliance trends
-Average ratings and sentiment scores
+## 📌 Customer Sentiment Analysis
 
+Insights include:
 
-Tools: Power BI aggregations, DAX measures, statistical functions
+- Rating Distribution
+- Positive Reviews
+- Negative Reviews
+- Keyword Analysis
+- Complaint Categories
+- Customer Feedback Trends
 
-B. Comparative Analysis
+---
 
-Purpose: Quantify pre-crisis vs. crisis changes
+# ❓ Business Questions Answered
 
-Decline % = (Pre-Crisis Value − Crisis Value) / Pre-Crisis Value × 100
+This project answers several real-world business questions.
 
-Example — Order Decline:
-= (24,000 − 9,000) / 24,000 × 100
-= 62.5% decline
+### Customer Analysis
 
-Applied to: orders, revenue, ratings, cancellations, SLA compliance
+- How many customers were lost during the crisis?
+- Which customer segments generated the highest revenue?
+- Which customers are most likely to return?
+- What percentage of loyal customers churned?
 
-C. Customer Segmentation
+---
 
-Purpose: Identify recoverable customers
+### Revenue Analysis
 
-SegmentCriteriaSample SizeRationaleHigh Return (60% chance)Pre-crisis orders ≥ 5 AND avg rating ≥ 4.5 AND crisis orders = 022,000Loyal customers lost due to failure, not dissatisfactionMedium Return (40% chance)Pre-crisis orders 3–4 AND avg rating ≥ 3.5 AND crisis orders = 028,000Mixed experience, cost-conscious, winnable backLow Return (15% chance)Pre-crisis orders ≤ 2 AND avg rating < 3.523,000Never fully engaged, low potential
+- How much revenue was lost?
+- Which months recorded the highest decline?
+- Which cities experienced the greatest financial impact?
+- Which customer segment contributed the most revenue?
 
-D. Revenue Impact Analysis
+---
 
-Purpose: Quantify financial loss across components
+### Operations
 
-Total Revenue = Subtotal Amount + Delivery Fee + Discounts Applied
+- How did delivery performance change?
+- What caused cancellation rates to increase?
+- Which cities experienced the worst SLA performance?
+- How much did delivery delays increase?
 
-ComponentPre-CrisisCrisisDeclineSubtotal₹36.34 Cr₹10.56 Cr70.95%Delivery Fee₹3.47 Cr₹1.01 Cr70.84%Discounts₹2.19 Cr₹0.63 Cr71.34%Total Revenue Lost₹27 million (70.92%)
+---
 
-E. Sentiment Analysis
+### Restaurant Analysis
 
-Purpose: Understand customer perception changes
+- Which restaurants lost the highest number of orders?
+- Which cuisines were affected the most?
+- Which restaurant categories have the highest churn risk?
 
-Rating-based sentiment scoring:
+---
 
-Rating RangeSentimentScore4.5 – 5.0Positive+1.03.5 – 4.4Neutral+0.52.5 – 3.4Mixed−0.5< 2.5Negative−1.0
+### Customer Experience
 
-Average Sentiment = Sum of All Sentiment Scores / Total Reviews
+- How did customer ratings change?
+- What were the major customer complaints?
+- Which issues appeared most frequently in reviews?
 
-Pre-Crisis Avg Rating: 4.55 → Positive Sentiment
-Crisis Avg Rating:     2.30 → Negative Sentiment
-Sentiment Change:     −0.49 (1.42-point drop on a −1 to +1 scale)
+---
 
-Keyword Analysis: text parsing on 48K reviews, frequency analysis of negative keywords, clustering by issue category (food quality, delivery, packaging, etc.), crisis vs. pre-crisis comparison.
+### Strategic Planning
 
-2. Customer Acquisition Cost (CAC) Analysis
+- Which customers should be targeted first?
+- What recovery strategy provides the highest ROI?
+- Which business areas require immediate investment?
 
-CAC = Total Marketing Spend / Number of New Customers Acquired
+---
 
-Pre-Crisis CAC: ₹50/customer
-Crisis CAC:     ₹150/customer
-Increase:       300%
+# 🔬 Methodology
 
-Contributing Factors (research-backed):
+The project follows a structured business analytics framework.
 
-FactorImpactSource18% GST implementation (Sept 22)+₹20 CACBusiness Standard, Sept 2025Google Ads CPC +42%+₹25 CACMarket data, competitive biddingMonsoon seasonality (−15–20% orders)+₹15 CACIndustry reportsBrand reputation damage+₹40 CACCalculated from conversion rate dropTotal+₹100 (300%)
+## 1️⃣ Data Collection
 
-Implication for Strategy: Reactivating existing customers (₹50/customer) is 3x more cost-effective than acquiring new customers at ₹150/customer during a crisis.
+Business data was gathered from multiple sources:
 
-3. Recovery Strategy ROI Modeling
+- Orders Database
+- CRM System
+- Restaurant Database
+- Review Platform
+- Operational Logs
 
-Pillar 1 — Customer Reactivation
+---
 
+## 2️⃣ Data Cleaning
 
-Target: 22,000 high-probability customers
-Incentive: 40% off + 3 months premium membership
-Expected reactivation: 60% (industry benchmark) → 13,200 customers recovered
-Avg customer LTV: ₹8,500 → Revenue recovered: ₹1.12 Cr
-Investment: ₹20–25M · ROI: 3–4x within 12 months
+Performed:
 
+- Missing Value Handling
+- Duplicate Removal
+- Data Validation
+- Standardization
+- Data Transformation
 
-Pillar 2 — Food Safety Certifications
+---
 
+## 3️⃣ Exploratory Data Analysis (EDA)
 
-Investment: ₹15–20M (FSSAI/HACCP audits, badges, promotion)
-Expected trust impact: 35–40% improvement
-Timeline: 2–3 months to certification
-Permanent benefit: ongoing compliance & customer confidence
+Explored:
 
+- Customer Behaviour
+- Revenue Trends
+- Seasonal Patterns
+- Restaurant Performance
+- Delivery Metrics
 
-Pillar 3 — Operational Excellence
+---
 
+## 4️⃣ KPI Development
 
-Weather-adaptive routing: ₹8–10M
-Fleet expansion: ₹12–15M
-SLA monitoring systems: ₹5–7M
-Total investment: ₹25–30M
-Expected SLA improvement: 12% → 40%+ · Cancellation reduction: 11.6% → <7% · Timeline: 6 months
+Business KPIs were created using DAX measures to monitor company performance.
 
+Examples include:
 
-Pillar 4 — Restaurant Support
+- Total Revenue
+- Monthly Orders
+- Customer Churn Rate
+- Customer Retention Rate
+- Average Rating
+- SLA Compliance
+- Cancellation Rate
+- Delivery Time
+- Customer Lifetime Value
+- Revenue Growth
 
+---
 
-Commission reduction: 5–10% for 6 months on <50 orders/month
-Marketing support: featured listings, campaigns
-Financial assistance: working capital support
-Target: small cloud kitchens (highest risk)
-Expected retention: 85% (vs. current 79%) · Investment: ₹10–15M
+## 5️⃣ Dashboard Development
 
+Interactive Power BI dashboards were built using:
 
-Total Recovery Roadmap
+- Cards
+- KPI Indicators
+- Line Charts
+- Clustered Bar Charts
+- Pie Charts
+- Donut Charts
+- Heat Maps
+- Tables
+- Matrix Visuals
+- Slicers
+- Drill-through Reports
 
-Total Investment₹70–80MTimeline6–9 monthsExpected Recovery80–90% of pre-crisis metricsCumulative ROI2.5–3x on total investment
+---
 
-4. Competitive Benchmarking
+# 📊 Key Performance Indicators (KPIs)
 
-Methodology: analyzed public financial reports and news articles, tracked market share and revenue growth trends, researched competitor strategies during QuickBite's crisis period, and validated findings against industry reports.
+| KPI | Description |
+|------|-------------|
+| 👥 Active Customers | Customers who placed orders during the selected period |
+| 📉 Customer Churn Rate | Percentage of customers who stopped ordering |
+| 💰 Revenue | Total revenue generated |
+| 🛒 Orders | Total completed orders |
+| ⭐ Average Rating | Average customer rating |
+| 🚚 Delivery Time | Average delivery duration |
+| ❌ Cancellation Rate | Percentage of cancelled orders |
+| 📦 SLA Compliance | Percentage of deliveries meeting SLA |
+| 🍽️ Restaurant Retention | Active restaurant partners |
+| ❤️ Customer Retention | Returning customers |
 
-CompetitorJun–Sep 2025ZomatoMarket share 58% (up from 56%) · Revenue growth 67% YoY (29% in July) · Profitable · Strategy: aggressive expansion, captured QuickBite's market shareSwiggyMarket share 42% (maintained) · App installs up 20–25% · Revenue growth 35% YoY · Improving profitability · Strategy: capitalized on QuickBite's operational failures
+---
 
-Impact on QuickBite:
+# ⚙️ DAX Measures Used
 
+Some of the important DAX calculations include:
 
-App ranking: #3 → #8
-15–25% of lost customers captured by competitors
-Market consolidation favored larger, more stable platforms
+- CALCULATE()
+- SUM()
+- SUMX()
+- DIVIDE()
+- DISTINCTCOUNT()
+- COUNTROWS()
+- FILTER()
+- SWITCH()
+- IF()
+- AVERAGEX()
+- DATEADD()
+- TOTALYTD()
+- ALL()
+- VALUES()
+- RANKX()
 
+These measures enabled dynamic calculations and interactive business insights throughout the dashboard.
 
+---
+# 📈 Key Findings
 
-📈 Key Findings
+The analysis revealed that the crisis was not caused by a single event but by a combination of operational failures, customer trust issues, and competitive pressure.
 
-Crisis Impact Summary
+---
 
-MetricPre-CrisisCrisisChange% ChangeMonthly Orders24,0009,000−15,000−62.5%Monthly Revenue₹7.6M avg₹2.75M avg−₹4.85M−63.8%Total Revenue (period)₹38M₹11M−₹27M−71%Active Customers100,00027,000−73,000−73%Avg Rating4.55 stars2.30 stars−2.25−49%SLA Compliance44%12%−32%−73%Avg Delivery Time40 min60 min+20 min+50%Cancellation Rate6.2%11.6%+5.4%+87%
+## 🚨 Crisis Impact Summary
 
-Root Causes
+| Metric | Pre-Crisis | Crisis Period | Change |
+|----------|------------|--------------|---------|
+| Monthly Orders | 24,000 | 9,000 | -62.5% |
+| Revenue | ₹38M | ₹11M | -71% |
+| Active Customers | 100,000 | 27,000 | -73% |
+| Average Rating | 4.55 | 2.30 | -49% |
+| SLA Compliance | 44% | 12% | -73% |
+| Delivery Time | 40 mins | 60 mins | +50% |
+| Cancellation Rate | 6.2% | 11.6% | +87% |
 
-Primary (Operational)
+---
 
+## 👥 Customer Churn Analysis
 
-SLA compliance collapsed from 44% → 12%
-Delivery infrastructure failed during monsoon
-High cancellations cascaded into negative reviews
+A total of **73,000 customers** stopped ordering during the crisis period.
 
+Customer segmentation revealed:
 
-Secondary (Reputational)
+| Segment | Customers | Recovery Probability |
+|----------|-----------|----------------------|
+| High Return | 22,000 | 60% |
+| Medium Return | 28,000 | 40% |
+| Low Return | 23,000 | 15% |
 
+### Key Insight
 
-Food safety viral incident
-Negative review sentiment hit 90% by September
-Top complaints: Quality (1,596), Safety (1,076), Packaging (997)
+More than **30% of churned customers remain highly recoverable**, indicating that customers left due to service failures rather than a shift in preference.
 
+---
 
-Tertiary (Competitive)
+## 💰 Revenue Loss Analysis
 
+The company lost approximately:
 
-Swiggy/Zomato captured 15–25% of lost customers
-Competitors ran aggressive campaigns during the crisis
-Market consolidation favored larger players
+### ₹27 Million Revenue
 
+Major losses came from:
 
-External (Market)
+- Reduced order volume
+- Customer churn
+- Restaurant partner exits
+- Increased cancellations
 
+### Revenue Decline
 
-18% GST on delivery (Sept 22) increased costs
-Google Ads CPC +42% from competitive bidding
-Monsoon seasonality reduced organic demand 15–20%
+| Component | Decline |
+|------------|----------|
+| Order Revenue | 70.95% |
+| Delivery Fees | 70.84% |
+| Discounts | 71.34% |
 
+---
 
-Recovery Opportunity
+## ⭐ Customer Experience Analysis
 
+Customer sentiment deteriorated significantly.
 
-High-priority segment: 22,000 customers (60% recovery probability)
-Revenue at risk: ₹1.12 Cr annually from the top-5% segment alone
-Geographic concentration: Bengaluru (27%) and Mumbai (15%)
-Order frequency recovery potential: 4.1 → 2.5+ orders/month
+### Rating Trend
 
+| Period | Avg Rating |
+|----------|------------|
+| Pre-Crisis | 4.55 |
+| Crisis | 2.30 |
 
+### Most Common Complaints
 
-Key Insight: Customers didn't leave due to a preference shift; they left due to service failure. This is reversible through targeted reactivation and operational fixes.
+1. Food Quality Issues
+2. Food Safety Concerns
+3. Late Deliveries
+4. Order Cancellations
+5. Packaging Problems
 
+Customer reviews showed a sharp increase in negative sentiment following the operational outage.
 
+---
 
+## 🚚 Operational Performance Analysis
 
-💡 Recommendations
+Operational metrics experienced severe deterioration.
 
-Immediate Actions (Month 1)
+### Delivery Time
 
+- Pre-Crisis: 40 minutes
+- Crisis: 60 minutes
 
-Launch VIP Reactivation Campaign — target 22,000 high-return customers with 40% off + 3 months premium; expected 13,200 returns and ₹1.12 Cr recovery
-Begin Food Safety Certification — FSSAI + HACCP audits for all partners, visible hygiene badges on the app; expected 35–40% trust improvement
-Restaurant Support Program — 5–10% commission reduction for small partners, marketing support for vulnerable cuisines (focus: North Indian/Biryani, 75% at-risk)
+### Cancellation Rate
 
+- Pre-Crisis: 6.2%
+- Crisis: 11.6%
 
-Medium-Term (Months 2–6)
+### SLA Compliance
 
+- Pre-Crisis: 44%
+- Crisis: 12%
 
-Operational Infrastructure Overhaul — weather-adaptive routing, expanded delivery fleet in monsoon-heavy zones, real-time SLA monitoring
-Customer Retention Program — tiered loyalty benefits, regular engagement campaigns, continuous feedback loops
+### Key Insight
 
+Operational failures directly triggered negative reviews, customer churn, and revenue decline.
 
-Long-Term (Months 6–9)
+---
 
+## 🍽️ Restaurant Partner Analysis
 
-Market Repositioning — competitive differentiation based on reliability, premium segment recovery (vs. budget), geographic expansion from the recovered base
+Restaurant partners were also affected by the crisis.
 
+Key observations:
 
+- Significant order decline across partner restaurants
+- Small restaurants faced higher risk
+- Cloud kitchens showed greater vulnerability
+- Multiple partners reduced platform dependency
 
-🛠️ Technical Implementation
+Restaurant churn further accelerated customer loss.
 
-Tools & Technologies Used
+---
 
-Data Visualization
+## 🏆 Competitive Analysis
 
+During QuickBite's crisis, competitors captured a large portion of lost customers.
 
-Power BI Desktop — interactive dashboards, 7 comprehensive pages
-Visual types: cards, charts, tables, donut charts, heatmaps, word clouds
-DAX functions: CALCULATE, SWITCH, IF, DIVIDE, DISTINCTCOUNT, SUMMARIZE
+### Market Impact
 
+- App ranking dropped significantly
+- Customer acquisition became more expensive
+- Competitors increased market share
 
-Data Analysis
+### Competitor Advantage
 
+Competitors benefited from:
 
-50+ custom DAX measures for segmentation, risk scoring, and ROI
-Statistical aggregations, trend analysis, probability scoring
-Modeling: customer lifetime value, churn probability, recovery potential
+- Better operational reliability
+- Stronger brand trust
+- Aggressive marketing campaigns
+- Faster delivery infrastructure
 
+---
 
+# 💡 Business Insights
 
-📂 Repository Structure
+### Insight 1
 
-quickbite-express-crisis-recovery-analysis/
+Customers did not leave because they preferred competitors.
+
+Customers left because:
+
+- Deliveries became unreliable
+- Orders were frequently cancelled
+- Food safety concerns reduced trust
+
+This makes recovery achievable.
+
+---
+
+### Insight 2
+
+Customer reactivation is significantly cheaper than acquiring new customers.
+
+| Strategy | Estimated Cost |
+|-----------|---------------|
+| Customer Reactivation | ₹50/customer |
+| New Acquisition | ₹150/customer |
+
+Reactivation is approximately **3x more cost-effective**.
+
+---
+
+### Insight 3
+
+High-value customers represent the largest recovery opportunity.
+
+Recovering the top customer segment could generate substantial revenue within a short period.
+
+---
+
+### Insight 4
+
+Operational excellence is the strongest driver of customer retention.
+
+Improvements in:
+
+- Delivery performance
+- Cancellation reduction
+- Service reliability
+
+can directly increase customer satisfaction.
+
+---
+
+# 🚀 Recovery Strategy
+
+The recovery roadmap focuses on four strategic pillars.
+
+---
+
+## Pillar 1: Customer Reactivation
+
+### Objective
+
+Win back high-value churned customers.
+
+### Actions
+
+- Personalized campaigns
+- Premium membership incentives
+- Loyalty rewards
+- Discount offers
+
+### Expected Impact
+
+- 13,200 customer recoveries
+- Revenue recovery of ₹1.12 Crore
+
+---
+
+## Pillar 2: Food Safety & Trust Rebuilding
+
+### Objective
+
+Restore customer confidence.
+
+### Actions
+
+- Food safety audits
+- Hygiene certifications
+- Restaurant compliance monitoring
+- Trust badges
+
+### Expected Impact
+
+- 35–40% trust improvement
+
+---
+
+## Pillar 3: Operational Excellence
+
+### Objective
+
+Improve delivery performance.
+
+### Actions
+
+- Weather-adaptive routing
+- Fleet expansion
+- Real-time monitoring
+- SLA tracking
+
+### Expected Impact
+
+- Lower cancellations
+- Faster deliveries
+- Higher customer satisfaction
+
+---
+
+## Pillar 4: Restaurant Partner Support
+
+### Objective
+
+Improve restaurant retention.
+
+### Actions
+
+- Commission reductions
+- Marketing support
+- Growth incentives
+- Partner assistance programs
+
+### Expected Impact
+
+- Improved partner retention
+- Stronger restaurant ecosystem
+
+---
+
+# 📋 Strategic Recommendations
+
+## Immediate Actions (0–30 Days)
+
+- Launch customer reactivation campaigns
+- Begin food safety audits
+- Improve SLA monitoring
+- Support vulnerable restaurant partners
+
+---
+
+## Medium-Term Actions (1–6 Months)
+
+- Upgrade delivery infrastructure
+- Enhance customer loyalty programs
+- Strengthen customer support systems
+- Improve operational visibility
+
+---
+
+## Long-Term Actions (6–12 Months)
+
+- Reposition brand image
+- Expand into profitable markets
+- Improve premium customer retention
+- Build resilience against future disruptions
+
+---
+
+# 💼 Business Impact
+
+If implemented successfully, the recovery strategy could deliver:
+
+✅ 80–90% Business Recovery
+
+✅ Revenue Restoration
+
+✅ Improved Customer Satisfaction
+
+✅ Reduced Customer Churn
+
+✅ Improved Operational Efficiency
+
+✅ Stronger Competitive Position
+
+✅ Higher Restaurant Retention
+
+---
+
+# 📊 Estimated ROI
+
+| Metric | Expected Outcome |
+|----------|----------------|
+| Total Investment | ₹70–80 Million |
+| Recovery Timeline | 6–9 Months |
+| Recovery Potential | 80–90% |
+| Expected ROI | 2.5x – 4x |
+| Customer Recovery | 13,200+ |
+
+---
+
+## 🎯 Final Conclusion
+
+The QuickBite Express crisis highlights how operational disruptions, customer trust issues, and competitive pressure can rapidly impact business performance.
+
+Through data-driven analysis, this project identifies not only the root causes behind the crisis but also actionable recovery opportunities capable of restoring growth, improving customer satisfaction, and rebuilding long-term business sustainability.
+
+The findings demonstrate the critical role of data analytics in transforming business challenges into strategic opportunities and supporting evidence-based decision-making.
+---
+
+# 🛠️ Tech Stack
+
+This project was built using industry-standard Business Intelligence and Data Analytics tools.
+
+| Category | Technologies |
+|----------|--------------|
+| 📊 Data Visualization | Power BI Desktop |
+| 📈 Business Intelligence | Power BI Service |
+| 🧮 Data Modeling | DAX (Data Analysis Expressions) |
+| 📋 Data Preparation | Power Query |
+| 📊 Data Analysis | Statistical Analysis |
+| 💼 Business Domain | Food Delivery Analytics |
+| 📂 File Format | PBIX |
+
+---
+
+# 📁 Repository Structure
+
+```
+QuickBite-Express-Crisis-Impact-and-Recovery-Analysis/
+│
+├── Dashboard/
+│   ├── QuickBite_Express.pbix
+│
+├── Dataset/
+│   ├── Orders.csv
+│   ├── Customers.csv
+│   ├── Restaurants.csv
+│   ├── Reviews.csv
+│   └── Operations.csv
+│
+├── Images/
+│   ├── Dashboard-Overview.png
+│   ├── Customer-Analysis.png
+│   ├── Revenue-Analysis.png
+│   ├── Operations-Analysis.png
+│   └── Restaurant-Analysis.png
+│
 ├── README.md
-├── LICENSE
-├── .gitignore
-├── data/              # Raw and processed datasets
-├── dashboards/        # Power BI (.pbix) files
-└── docs/              # Supporting documentation, notes, references
+└── LICENSE
+```
 
-📬 Contact
+> **Note:** Update the folder names above to match your actual repository structure if needed.
 
-Feel free to open an issue or reach out with questions about the methodology or findings.
+---
+
+# 📸 Dashboard Preview
+
+> Add screenshots of your Power BI dashboard in the **Images** folder and update the paths below.
+
+## Executive Dashboard
+
+```markdown
+![Executive Dashboard](Images/Dashboard-Overview.png)
+```
+
+## Customer Analysis
+
+```markdown
+![Customer Analysis](Images/Customer-Analysis.png)
+```
+
+## Revenue Analysis
+
+```markdown
+![Revenue Analysis](Images/Revenue-Analysis.png)
+```
+
+## Operations Dashboard
+
+```markdown
+![Operations Analysis](Images/Operations-Analysis.png)
+```
+
+## Restaurant Performance
+
+```markdown
+![Restaurant Analysis](Images/Restaurant-Analysis.png)
+```
+
+---
+
+# 🚀 How to Use
+
+1. Clone this repository.
+
+```bash
+git clone https://github.com/yourusername/QuickBite-Express-Crisis-Impact-and-Recovery-Analysis.git
+```
+
+2. Open the **PBIX** file using **Power BI Desktop**.
+
+3. Refresh the dataset if required.
+
+4. Explore the interactive dashboards using slicers and filters.
+
+---
+
+# 📊 Business Value
+
+This project demonstrates how data analytics can support strategic business decisions by:
+
+- Identifying customer churn drivers
+- Measuring financial impact
+- Evaluating operational efficiency
+- Analyzing customer sentiment
+- Supporting executive decision-making
+- Prioritizing recovery initiatives
+- Estimating ROI for business strategies
+
+---
+
+# 🎯 Skills Demonstrated
+
+This project showcases expertise in:
+
+- Business Intelligence
+- Data Visualization
+- Power BI Dashboard Development
+- DAX Measures
+- Data Modeling
+- KPI Design
+- Customer Segmentation
+- Churn Analysis
+- Revenue Analysis
+- Root Cause Analysis
+- Strategic Business Consulting
+- Executive Reporting
+- Data Storytelling
+
+---
+
+# 🔮 Future Enhancements
+
+Potential improvements for future versions include:
+
+- Predictive Customer Churn Modeling
+- Machine Learning-Based Demand Forecasting
+- Real-Time Dashboard Integration
+- Automated Data Refresh
+- Customer Lifetime Value Prediction
+- Geographic Heat Map Analysis
+- AI-Powered Customer Sentiment Analysis
+- What-If Scenario Analysis
+- Executive Mobile Dashboard
+
+---
+
+# 📚 Key Learnings
+
+Through this project, I gained practical experience in:
+
+- Solving real-world business problems using data
+- Building interactive Power BI dashboards
+- Designing business KPIs
+- Applying DAX for advanced calculations
+- Communicating insights through storytelling
+- Developing strategic recommendations backed by data
+- Creating executive-level reports for stakeholders
+
+---
+
+# 👨‍💻 Author
+
+**Nahid Qureshi**
+
+**Aspiring Data Analyst | Power BI Developer | SQL | Python | Excel**
+
+I enjoy transforming raw data into actionable insights and building dashboards that help organizations make smarter, data-driven decisions.
+
+---
+
+# 🤝 Let's Connect
+
+If you found this project helpful or would like to collaborate, feel free to connect with me.
+
+- 💼 LinkedIn: *(www.linkedin.com/in/nahid23)*
+- 📧 Email: *(nahidqureshi.work@gmail.com)*
+
+
+---
+
+# ⭐ Support
+
+If you found this project useful:
+
+⭐ Star this repository
+
+🍴 Fork the repository
+
+💬 Share your feedback
+
+Your support helps me create more real-world data analytics projects.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this project with proper attribution.
+
+See the `LICENSE` file for more details.
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to the open-source community and the Power BI ecosystem for providing excellent tools and learning resources that made this project possible.
+
+---
+
+# 📌 Final Note
+
+This project is a fictional business case study created for learning and portfolio purposes. It demonstrates how data analytics, visualization, and strategic thinking can be used to solve complex business challenges and support data-driven decision-making.
+
+---
+
+## ⭐ If you liked this project, don't forget to Star the repository!
